@@ -1,0 +1,242 @@
+/* ===== BASE ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f4f4f4;
+}
+
+a {
+  color: #d62828;
+}
+
+hr {
+  margin: 32px 0;
+  border-top: 1px solid #ccc;
+  opacity: 1;
+}
+
+/* ===== CABEÇALHO E MENU ===== */
+.topo {
+  background: #d62828;
+  color: #fff;
+}
+
+.topo__titulo {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.menu {
+  background: #a31f1f;
+}
+
+.menu .nav-link {
+  padding: 12px 20px;
+}
+
+.menu .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== INÍCIO ===== */
+.inicio {
+  padding: 16px 0;
+}
+
+.inicio__texto {
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+
+/* ===== CLASSE DE CARDS ===== */
+.card-carro {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-carro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-carro__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #e9e9e9;
+}
+
+.card-carro__corpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+}
+
+.card-carro__titulo {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.card-carro__info {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-carro__preco {
+  margin-top: auto;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #d62828;
+}
+
+/* ===== BOTÕES DO BOOTSTRAP NA COR DA MARCA ===== */
+.btn-danger {
+  background-color: #d62828;
+  border-color: #d62828;
+}
+
+.btn-danger:hover {
+  background-color: #a31f1f;
+  border-color: #a31f1f;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario {
+  max-width: 800px;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+  background: #222;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.rodape address {
+  font-style: normal;
+}
+
+.redes-sociais {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.redes-sociais a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.redes-sociais a:hover {
+  opacity: 0.85;
+}
+
+.whatsapp {
+  background-color: #25d366;
+}
+
+.instagram {
+  background-color: #e1306c;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+/* ===== BOTÃO FLUTUANTE DO WHATSAPP ===== */
+.whatsapp-flutuante {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  padding: 12px 18px;
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-flutuante:hover {
+  opacity: 0.9;
+  color: #fff;
+}
+
+/* ===== MEDIA QUERIES PRÓPRIAS ===== */
+
+/* Celulares pequenos */
+@media (max-width: 575px) {
+  main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .inicio .btn {
+    width: 100%;
+  }
+
+  .formulario .btn {
+    width: 100%;
+  }
+}
+
+/* Tablet (768px a 1023px) */
+@media (min-width: 768px) {
+  .topo__titulo {
+    font-size: 2.2rem;
+  }
+
+  .redes-sociais {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .redes-sociais a {
+    width: auto;
+    flex: 1;
+  }
+}
+
+/* Notebook e desktop (1024px em diante) */
+@media (min-width: 1024px) {
+  .topo__titulo {
+    font-size: 2.8rem;
+  }
+
+  .inicio {
+    padding: 40px 0;
+  }
+
+  .inicio__texto {
+    font-size: 1.1rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .redes-sociais {
+    flex-direction: column;
+  }
+}
